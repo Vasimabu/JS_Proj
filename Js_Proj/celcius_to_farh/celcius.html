@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width-content-width initial-scale='1.0'">
+        <link rel="stylesheet" href="celcius.css">
+        <title>celcius to frahen</title>
+    </head>
+    <body>
+        <div id="wrapper">
+            <h2>celsius to fharen</h2>
+            <div class="inputdiv">
+                <input type="text" id="input" placeholder="celsius to farhen">                
+            </div>
+            <div>
+                <button type="submit" onclick="convert()">Celsius to fhraen</button>
+            </div>
+            <div id="result"></div><br>
+            <h2>fharen to celcius</h2>
+            <div class="inputdiv">
+                <input type="text" id="input_2" placeholder="faren to celcius">                
+            </div>
+            <div>
+                <button type="submit" onclick="conversion()">Fharen to celcius</button>
+            </div>
+            <div id="output"></div>
+        </div>
+        <script>
+            function convert(){
+                const celval=Number(document.getElementById("input").value)
+                const farhn=(9/5*celval)+32
+                const result = document.getElementById("result")
+                result.innerHTML =farhn.toFixed(2) +"frahen"
+            }
+            function conversion(){
+                let fharen=Number(document.getElementById("input_2").value)
+                let celsius=(fharen-32)*5/9
+                let output=document.getElementById("output")
+                output.innerHTML =celsius.toFixed(2) +"celcius"
+            }
+        </script>
+    </body>
+    </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width-content-width" initial-scale="1.0">
+        <link rel="stylesheet" href="para.css">
+        <title>paragraph length</title>
+    </head>
+    <body>
+        <div id="wrapper">
+            <h2>Type a Sentance</h2>
+            <div class="inputdiv">
+                <textarea id="input" name="input" rows="20" cols="40" placeholder="write 100words about ur self"></textarea>                
+            </div>
+            <div>
+                <button type="submit" onclick="convert()">Calculate words</button>
+            </div>
+            <div id="result"></div><br>
+        </div>
+        <script>
+            function convert(){
+                const str =document.getElementById("input").value
+                const arr =str.split(' ',100)
+                const result = document.getElementById("result")
+                result.innerHTML =arr.length +" words "
+            }
+        </script>
+    </body>
+    </body>
+</html>
+
+
+<!-- let str=`when you call yourself an indian or a muslim or a christian  
+or a european or anything else, you are being violent`
+let arr=str.split(' ',100)
+console.log(arr.length)-->
